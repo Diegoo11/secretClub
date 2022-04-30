@@ -1,0 +1,50 @@
+.count {
+  margin: 20px auto;
+  width: min(384px, 80vw);
+  background-color: #23272a;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 30px;
+  
+}
+.count .titleH1 {
+  margin: auto;
+  margin: 20px auto;
+}
+.count .inputForm {
+  margin: auto;
+  width: 85%;
+  appearance: none;
+  background-color: #2c2f33;
+  border: 0;
+  outline: none;
+  font-size: 1.1rem;
+  padding: 10px 15px;
+  color: white;
+  border-radius: 2px;
+}
+.count .labelForm {
+  width: 80%;
+  margin: auto 10px;
+  margin-top: 40px;
+  margin-bottom: 5px;
+
+  font-size: 0.8rem;
+}
+.count .btnSubmit {
+  padding: 15px 40px;
+  margin: 40px auto;
+  border-radius: 10px;
+  background-color: #7289da;
+  border: 0;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.inputForm:invalid {
+  border: solid #881717 1px;
+}
+
+/*# sourceMappingURL=style.css.map */

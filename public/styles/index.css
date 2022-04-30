@@ -1,0 +1,31 @@
+* {
+  font-family: "Ubuntu", sans-serif;
+}
+
+body {
+  background-color: #2c2f33;
+  margin: 0;
+  padding: 0;
+  color: white;
+  overflow-x: hidden;
+}
+
+.btn {
+  transition: all 150ms;
+}
+
+.btn:hover{
+  transform: scale(1.04);
+  cursor: pointer;
+}
+
+.link{
+  color: rgb(197, 197, 197);
+  font-weight: bold;
+  transition: all 150ms;
+  min-width: 59px;
+}
+.link:hover{
+  text-decoration: underline;
+  color: white;
+}
