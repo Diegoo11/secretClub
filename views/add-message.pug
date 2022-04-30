@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  link(rel="stylesheet", href="/styles/form.css")
+  if(currentUser) 
+    form.count(method='POST' action='' autocomplete="off")
+      h1.titleH1 Inicia Sesion 
+      label.labelForm(for="title") Title: 
+      input#title.inputForm(type="text", name="title" required)
+      label.labelForm(for="text") Text: 
+      textarea#text.inputForm(name="text", cols="30", rows="10" required) 
+      button.btnSubmit.btn(type="submit") Submit
+  else 
+    h1 Primero inicia sescion :)

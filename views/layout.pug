@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title= title
+    link(rel='stylesheet', href='/styles/index.css')
+  body
+    link(rel="stylesheet", href="/styles/home.css")
+    header 
+      span.titleSpan 
+        a.titleSpan(href='/') CLUB SECRET
+      nav 
+        if(currentUser)
+          a.link(href='/log-out') Log out
+        else
+          a.link(href='/sign-in') Sign in 
+          a.link(href='/log-in') Log in
+    block content
