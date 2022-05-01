@@ -92,6 +92,7 @@ exports.add_message_post = [
 
     if(!errors.isEmpty()){
       res.render('add-message', {message: message, errors: errors});
+      return;
     }
 
     message.save((err) => {
