@@ -7,6 +7,8 @@ const dotenv = require('dotenv');
 const path = require('path');
 const User = require('./models/user');
 const bcryptjs = require('bcryptjs');
+const compression = require('compression');
+const helmet = require('helmet');
 
 dotenv.config('./.env');
 const port = process.env.PORT;
@@ -51,6 +53,7 @@ passport.deserializeUser((id, done) => {
 
 const app = express();
 
+app.use(helmet());
 app.use(session({ secret: 'cats', resave: false, saveUninitialized: true }));
 app.use(passport.initialize());
 app.use(passport.session());
@@ -64,6 +67,7 @@ app.use((req, res, next) => {
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
+app.use(compression());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
